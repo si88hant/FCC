@@ -10,7 +10,7 @@
     <h1> <%= kindOfDay %> </h1>
 
     <ul>
-        <% for(let i=0; i<newListItems.length; i++){ %> 
+        <% for(let i=0; i<newListItems.length; i++){ %>   //we can't use items.length here because we are rendering newListItems as a variable
             <li> <%= newListItems[i] %> </li>
         <% } %> 
     </ul>
