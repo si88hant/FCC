@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <h1> <%= kindOfDay %> </h1>
+    <div class="box" id="heading">
+        <h1> <%= kindOfDay %> </h1>
+    </div>
 
-    <ul>
-        <% for(let i=0; i<newListItems.length; i++){ %>   //we can't use items.length here because we are rendering newListItems as a variable
-            <li> <%= newListItems[i] %> </li>
-        <% } %> 
-    </ul>
+    <div class="box">
 
-    <form action="/" method="post">
-        <input type="text" name="newItem"> 
-        <button type="submit" name="submit">Add</button>
-    </form>
+        <% for(let i=0; i<newListItems.length; i++){ %>
+        <!--we can't use items.length here because we are rendering newListItems as a variable-->
+        <div class="item">
+            <input type="checkbox" name="" id="">
+            <p> <%= newListItems[i] %> </p>
+
+        </div>
+
+        <% } %>
+        <form class="item" action="/" method="post">
+            <input type="text" name="newItem" placeholder="New Item">
+            <button type="submit" name="submit">+</button>
+        </form>
+    </div>
+     
+
+
 </body>
+
 </html>
